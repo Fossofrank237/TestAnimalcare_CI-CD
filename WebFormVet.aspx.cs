@@ -15,7 +15,6 @@ namespace AnimalCare_dbFirst
         {
             GridView1.DataSource = AnimalCareEntities.vw_VisitsForToday.ToList();
             GridView1.DataBind();
-            GridView1.HeaderRow.Cells[0].Style["white-space"] = "nowrap";
         }
     }
 }
