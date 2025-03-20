@@ -108,5 +108,10 @@ namespace AnimalCare_dbFirst
             Response.Redirect("WebFormLogin.aspx");
 
         }
+
+        protected void BtnManageVisits_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormVisits.aspx");
+        }
     }
 }

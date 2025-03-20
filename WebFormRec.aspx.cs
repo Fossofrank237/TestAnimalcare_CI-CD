@@ -34,5 +34,10 @@ namespace AnimalCare_dbFirst
             Response.Redirect("WebFormLogin.aspx");
 
         }
+
+        protected void btnNewAppointment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormVisits.aspx");
+        }
     }
 }

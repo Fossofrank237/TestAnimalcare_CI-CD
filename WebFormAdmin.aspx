@@ -55,7 +55,7 @@
                     <td class="auto-style2" colspan="2">
                         <asp:Button ID="BtnManageEmployee" runat="server" Text="Manage Employees" style="margin-right: 10px"/>
                         <asp:Button ID="BtnDispoVt" runat="server" Text="Consult Veterinarian Schedule" style="margin-left: 10px;margin-right: 10px" OnClick="BtnDispoVt_Click"/>
-                        <asp:Button ID="BtnManageVisits" runat="server" Text="Manage Visits" style="margin-left: 10px;"/>
+                        <asp:Button ID="BtnManageVisits" runat="server" Text="Manage Visits" style="margin-left: 10px;" OnClick="BtnManageVisits_Click"/>
                     </td>
                 </tr>
                 <tr>
