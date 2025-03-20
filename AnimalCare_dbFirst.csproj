@@ -85,6 +85,7 @@
     </Content>
     <Content Include="Web.config" />
     <Content Include="WebFormLogin.aspx" />
+    <Content Include="WebFormRec.aspx" />
     <Content Include="WebFormVet.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +207,13 @@
     </Compile>
     <Compile Include="WebFormLogin.aspx.designer.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormRec.aspx.cs">
+      <DependentUpon>WebFormRec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormRec.aspx.designer.cs">
+      <DependentUpon>WebFormRec.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormVet.aspx.cs">
       <DependentUpon>WebFormVet.aspx</DependentUpon>
