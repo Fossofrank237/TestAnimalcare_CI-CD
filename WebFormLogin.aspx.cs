@@ -33,6 +33,7 @@ namespace AnimalCare_dbFirst
                 //Sauvgarder les données pour la session
                 Session["EmployeeId"] = employee.EmployeeId;
                 Session["EmployeeRole"] = employee.Role;
+                Session["EmployeeName"] = employee.FirstName + " " + employee.LastName;
 
                 if (employee.Role.Equals("VT"))
                 {
