@@ -40,8 +40,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
-                        <asp:Button ID="BtnManageEmployee" runat="server" Text="Manage Employee" style="margin-right: 10px"/>
-                        <asp:Button ID="BtnDispoVt" runat="server" Text="Consult Veterinarian Schedule" style="margin-left: 10px"/>
+                        <asp:Button ID="BtnManageEmployee" runat="server" Text="Manage Employees" style="margin-right: 10px"/>
+                        <asp:Button ID="BtnDispoVt" runat="server" Text="Consult Veterinarian Schedule" style="margin-left: 10px;margin-right: 10px" OnClick="BtnDispoVt_Click"/>
+                        <asp:Button ID="BtnManageVisits" runat="server" Text="Manage Visits" style="margin-left: 10px;"/>
                     </td>
                 </tr>
                 <tr>
@@ -85,6 +86,7 @@
                                         <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
                                         <TodayDayStyle BackColor="#CCCCCC" />
                                     </asp:Calendar>
+                                    <asp:Button ID="BtnRemoveDateFilter" runat="server" Text="Reset" />
                                 </td>
                                 <td class="filterTxtBoxStyle">
                                     <asp:TextBox ID="TxtBoxFilterPetName" runat="server" OnTextChanged="TxtBoxFilterPetName_TextChanged"></asp:TextBox>
@@ -114,7 +116,18 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:GridView ID="GridViewHistory" runat="server" HorizontalAlign="Center">
+                        <asp:GridView ID="GridViewHistory" runat="server" HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridViewHistory_SelectedIndexChanged">
+                            <AlternatingRowStyle BackColor="White" />
+                            <EditRowStyle BackColor="#2461BF" />
+                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#EFF3FB" />
+                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
                     </td>
                 </tr>

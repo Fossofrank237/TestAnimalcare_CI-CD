@@ -60,6 +60,15 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.WebControls.Button BtnDispoVt;
 
         /// <summary>
+        /// BtnManageVisits control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnManageVisits;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace AnimalCare_dbFirst
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar CalendarFilterDate;
+
+        /// <summary>
+        /// BtnRemoveDateFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnRemoveDateFilter;
 
         /// <summary>
         /// TxtBoxFilterPetName control.
