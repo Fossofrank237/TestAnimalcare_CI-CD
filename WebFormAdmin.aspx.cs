@@ -75,5 +75,20 @@ namespace AnimalCare_dbFirst
         {
             
         }
+
+        protected void BtnRemoveDateFilter_Click(object sender, EventArgs e)
+        {
+            this.CalendarFilterDate.SelectedDate = default;
+        }
+
+        protected void GridViewHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnDispoVt_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormVetSchedule.aspx");
+        }
     }
 }

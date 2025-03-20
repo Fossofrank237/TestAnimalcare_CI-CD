@@ -89,6 +89,7 @@
     <Content Include="WebFormPet.aspx" />
     <Content Include="WebFormRec.aspx" />
     <Content Include="WebFormVet.aspx" />
+    <Content Include="WebFormVetSchedule.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalCareDb.Context.cs">
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="WebFormVet.aspx.designer.cs">
       <DependentUpon>WebFormVet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormVetSchedule.aspx.cs">
+      <DependentUpon>WebFormVetSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormVetSchedule.aspx.designer.cs">
+      <DependentUpon>WebFormVetSchedule.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
