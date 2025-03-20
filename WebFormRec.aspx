@@ -9,13 +9,10 @@
         .auto-style1 { width: 100%; }
         .auto-style2 { text-align: center; }
         .auto-style3 { text-align: center; height: 30px; }
-        .auto-style4 { height: 23px; }
         .auto-style9 { width: 373px; }
-        .auto-style10 { height: 23px; width: 373px; }
-        .auto-style13 { height: 30px; }
-        .auto-style14 { height: 30px; width: 453px; }
+        .auto-style13 { height: 67px; }
+        .auto-style14 { height: 67px; width: 453px; }
         .auto-style15 { width: 198px; }
-        .auto-style16 { height: 23px; width: 198px; }
         .myGrid td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px; }
     </style>
 </head>
@@ -66,6 +63,9 @@
                 </td>
                 <td class="auto-style13">
                     <asp:Button ID="btnPetRecords" runat="server" Text="Pet Records" />
+                </td>
+                <td class="auto-style13">
+                    <asp:Button ID="btnManagePets" runat="server" Text="Manage Pets" OnClick="btnManagePets_Click" />
                 </td>
             </tr>
         </table>
