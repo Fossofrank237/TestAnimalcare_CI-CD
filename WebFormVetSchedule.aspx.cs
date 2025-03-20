@@ -128,5 +128,10 @@ namespace AnimalCare_dbFirst
             }).OrderBy(vs => vs.EmployeeId).ToList();
             this.GridViewVetSchedule.DataBind();
         }
+
+        protected void BtnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormAdmin.aspx");
+        }
     }
 }
