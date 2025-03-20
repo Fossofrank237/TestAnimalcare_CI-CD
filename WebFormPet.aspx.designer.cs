@@ -11,7 +11,7 @@ namespace AnimalCare_dbFirst
 {
 
 
-    public partial class WebFormRec
+    public partial class WebFormPet
     {
 
         /// <summary>
@@ -24,48 +24,66 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Contrôle GridViewAppointments.
+        /// Contrôle GridViewPets.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewAppointments;
+        protected global::System.Web.UI.WebControls.GridView GridViewPets;
 
         /// <summary>
-        /// Contrôle btnNewAppointment.
+        /// Contrôle txtName.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewAppointment;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// Contrôle btnManageOwners.
+        /// Contrôle txtSpecies.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnManageOwners;
+        protected global::System.Web.UI.WebControls.TextBox txtSpecies;
 
         /// <summary>
-        /// Contrôle btnPetRecords.
+        /// Contrôle txtAge.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPetRecords;
+        protected global::System.Web.UI.WebControls.TextBox txtAge;
 
         /// <summary>
-        /// Contrôle btnManagePets.
+        /// Contrôle txtOwnerId.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnManagePets;
+        protected global::System.Web.UI.WebControls.TextBox txtOwnerId;
+
+        /// <summary>
+        /// Contrôle btnAddPet.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddPet;
+
+        /// <summary>
+        /// Contrôle btnBack.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }
