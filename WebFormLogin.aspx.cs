@@ -15,6 +15,7 @@ namespace AnimalCare_dbFirst
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // WTF IS THIS ? WHAT DOES IT DO ? 
             this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 

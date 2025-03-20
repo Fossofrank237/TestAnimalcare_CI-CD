@@ -84,6 +84,7 @@
       <LastGenOutput>AnimalCareDb.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
+    <Content Include="WebFormAdmin.aspx" />
     <Content Include="WebFormLogin.aspx" />
     <Content Include="WebFormVet.aspx" />
   </ItemGroup>
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="vw_VisitsForToday.cs">
       <DependentUpon>AnimalCareDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormAdmin.aspx.cs">
+      <DependentUpon>WebFormAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormAdmin.aspx.designer.cs">
+      <DependentUpon>WebFormAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormLogin.aspx.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>
