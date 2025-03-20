@@ -68,7 +68,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="auto-style3">
-                        <asp:Button ID="BtnReturn" runat="server" OnClick="BtnReturn_Click" Text="Return to Admin Panel" />
+                        <asp:Button ID="BtnReturn" runat="server" OnClick="BtnReturn_Click" Text="Return to Panel" />
                     </td>
                 </tr>
             </table>

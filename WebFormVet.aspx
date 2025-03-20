@@ -137,7 +137,7 @@
                     <asp:Button ID="btnPetFile" runat="server" Text="Pet's File" />
                 </td>
                 <td class="auto-style13">
-                    <asp:Button ID="Button2" runat="server" Text="Full Schedule" />
+                    <asp:Button ID="Button2" runat="server" Text="Full Schedule" OnClick="Button2_Click" />
                 </td>
             </tr>
         </table>

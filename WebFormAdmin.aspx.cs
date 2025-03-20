@@ -18,6 +18,9 @@ namespace AnimalCare_dbFirst
         {
             this.GridViewHistory.DataSource = entities.HistoryVisits.ToList();
             this.GridViewHistory.DataBind();
+
+            int employeeId = Convert.ToInt32(Session["EmployeeId"]);
+            string employeeRole = Session["EmployeeRole"].ToString();
         }
 
         protected void TxtBoxFilterPetName_TextChanged(object sender, EventArgs e)

@@ -131,7 +131,15 @@ namespace AnimalCare_dbFirst
 
         protected void BtnReturn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebFormAdmin.aspx");
+            if (Session["EmployeeRole"].ToString().Equals("AD"))
+            {
+                Response.Redirect("WebFormAdmin.aspx");
+            } else if (Session["EmployeeRole"].ToString().Equals("VT"))
+            {
+                Response.Redirect("WebFormVet.aspx");
+            }
+            
+            
         }
     }
 }

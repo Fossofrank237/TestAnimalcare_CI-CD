@@ -11,7 +11,8 @@ namespace AnimalCare_dbFirst
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int employeeId = Convert.ToInt32(Session["EmployeeId"]);
+            string employeeRole = Session["EmployeeRole"].ToString();
         }
 
         protected void btnManagePets_Click(object sender, EventArgs e)
