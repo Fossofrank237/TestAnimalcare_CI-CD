@@ -21,6 +21,7 @@ namespace AnimalCare_dbFirst
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
+            //Récuperation des données pour le login
             string userName = Login1.UserName;
             string password = Login1.Password;
 
