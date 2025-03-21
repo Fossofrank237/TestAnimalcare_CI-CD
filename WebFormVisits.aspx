@@ -64,7 +64,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="4">
-                        <asp:Button ID="btnNewAppointment" runat="server" Text="New Appointment" style="margin-right: 10px"/>
+                        <asp:Button ID="btnNewAppointment" runat="server" Text="New Appointment" style="margin-right: 10px" OnClick="btnNewAppointment_Click"/>
                         <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Appointment" style="margin-left: 10px;margin-right: 10px"/>
                         <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Appointment" style="margin-left: 10px;"/>
                     </td>
@@ -80,7 +80,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style9" colspan="4">
-                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" />
+                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" OnClick="btnFilter_Click" />
                     </td>
                 </tr>
                 </table>
@@ -93,8 +93,11 @@
                 <td class="auto-style11">
                     <asp:Label ID="Label2" runat="server" Text="Pet Name"></asp:Label>
                 </td>
-                <td>
-                    <asp:Label ID="Label3" runat="server" Text="Employee Email"></asp:Label>
+                <td class="auto-style11">
+                    <asp:Label ID="Label6" runat="server" Text="Employee First Name"></asp:Label>
+                </td>
+                <td class="auto-style11">
+                    <asp:Label ID="Label7" runat="server" Text="Employee Last Name"></asp:Label>
                 </td>
                 <td>
                     <asp:Label ID="Label5" runat="server" Text="Date Start"></asp:Label>
@@ -107,8 +110,11 @@
                 <td class="auto-style11">
                     <asp:TextBox ID="txtBoxPetName" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:TextBox ID="txtBoxEmployeeEmail" runat="server"></asp:TextBox>
+                <td class="auto-style11">
+                    <asp:TextBox ID="txtBoxEmployeeFirstName" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style11">
+                    <asp:TextBox ID="txtBoxEmployeeLastName" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="txtBoxDateStart" runat="server" AutoPostBack="true" OnTextChanged="txtBoxDateStart_TextChanged1"></asp:TextBox>
@@ -117,7 +123,8 @@
             <tr>
                 <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style11">&nbsp;</td>
+                <td class="auto-style11">&nbsp;</td>
                 <td>
                     <asp:Panel ID="PanelCalendar" runat="server" Visible="False">
                         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" OnSelectionChanged="Calendar1_SelectionChanged">
@@ -129,6 +136,67 @@
                             <TodayDayStyle BackColor="#CCCCCC" />
                         </asp:Calendar>
                     </asp:Panel>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="5">
+                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="5">
+                    <asp:Button ID="btnResetFilter" runat="server" OnClick="btnResetFilter_Click" Text="Reset" />
+                </td>
+            </tr>
+        </table>
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <h2 class="auto-style2">APPOINTMENTS</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:GridView ID="GridViewAppointments" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <EditRowStyle BackColor="#999999" />
+                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="auto-style2">VETERINARY&#39;S AVAILABILITY</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:GridView ID="GridViewAvailability" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <EditRowStyle BackColor="#999999" />
+                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Return to Panel" />
                 </td>
             </tr>
         </table>
