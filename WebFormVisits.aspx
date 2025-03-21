@@ -28,10 +28,6 @@
             width: 351px;
             height: 23px;
         }
-        .auto-style8 {
-            text-align: center;
-            font-size: large;
-        }
         .auto-style9 {
             height: 23px;
             text-align: center;
@@ -41,6 +37,10 @@
         }
         .auto-style11 {
             width: 300px;
+        }
+        .auto-style12 {
+            text-align: center;
+            height: 30px;
         }
     </style>
 </head>
@@ -65,7 +65,7 @@
                 <tr>
                     <td class="auto-style2" colspan="4">
                         <asp:Button ID="btnNewAppointment" runat="server" Text="New Visit" style="margin-right: 10px" OnClick="btnNewAppointment_Click"/>
-                        <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Visit" style="margin-left: 10px;margin-right: 10px"/>
+                        <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Visit" style="margin-left: 10px;margin-right: 10px" OnClick="btnModifyAppointment_Click"/>
                         <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Visit" style="margin-left: 10px;"/>
                     </td>
                 </tr>
@@ -113,16 +113,6 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2" colspan="5">
-                    <h3>Filter</h3>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style9" colspan="5">
-                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" OnClick="btnFilter_Click" />
-                    </td>
-            </tr>
-            <tr>
                 <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
@@ -142,12 +132,22 @@
             </tr>
             <tr>
                 <td class="auto-style2" colspan="5">
-                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                    <h3>Filter</h3>
                 </td>
+            </tr>
+            <tr>
+                <td class="auto-style12" colspan="5">
+                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" OnClick="btnFilter_Click" />
+                    </td>
             </tr>
             <tr>
                 <td class="auto-style2" colspan="5">
                     <asp:Button ID="btnResetFilter" runat="server" OnClick="btnResetFilter_Click" Text="Reset" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="5">
+                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>

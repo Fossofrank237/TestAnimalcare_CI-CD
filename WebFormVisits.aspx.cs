@@ -13,8 +13,8 @@ namespace AnimalCare_dbFirst
         protected void Page_Load(object sender, EventArgs e)
         {
             //GridView pour les rendez-vous
-            var appointments = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
-            GridViewAppointments.DataSource = appointments;
+            var visits = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
+            GridViewAppointments.DataSource = visits;
             GridViewAppointments.DataBind();
 
             //GridView pour les disponibilités
@@ -83,8 +83,8 @@ namespace AnimalCare_dbFirst
 
         protected void btnResetFilter_Click(object sender, EventArgs e)
         {
-            var appointments = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
-            GridViewAppointments.DataSource = appointments;
+            var visits = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
+            GridViewAppointments.DataSource = visits;
             GridViewAppointments.DataBind();
 
             this.txtBoxOwnerPhone.Text = "";
@@ -138,6 +138,72 @@ namespace AnimalCare_dbFirst
 
             this.lblMessage.Text = "Visit created successcully";
             this.lblMessage.ForeColor= System.Drawing.Color.Green;
+        }
+
+        protected void btnModifyAppointment_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBoxOwnerPhone.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPetName.Text))
+            {
+                this.lblMessage.Text = "Error: Owner phone number and Pet name are required.";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            //Récupération des petId et Visit à modifier
+
+            int petId = AnimalCareEntities.Pets.
+                Where(p => p.Name == this.txtBoxPetName.Text).
+                Select(p => p.PetId)
+                .FirstOrDefault();
+
+            if(petId == 0)
+            {
+                this.lblMessage.Text = "Pet not found";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            Visit visitSelected = AnimalCareEntities.Visits.
+                Where(v => v.PetId == petId).
+                FirstOrDefault();
+
+            if(visitSelected != null)
+            {
+                this.lblMessage.Text = "Visit not found";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            Employee selectedEmployee = AnimalCareEntities.Employees.
+                Where(v => v.FirstName == this.txtBoxEmployeeFirstName.Text &&
+                v.LastName == this.txtBoxEmployeeLastName.Text).
+                FirstOrDefault();
+
+            //Récupération de la nouvelle date
+            DateTime dateStart = DateTime.Parse(txtBoxDateStart.Text);
+            DateTime dateEnd = dateStart.AddMinutes(30);
+
+            try
+            {
+                visitSelected.DateStart = dateStart;
+                visitSelected.DateEnd = dateEnd;
+                visitSelected.Report = "";
+                visitSelected.Active = true;
+                visitSelected.PetId = petId;
+
+                visitSelected.Employees.Clear();
+                visitSelected.Employees.Add(selectedEmployee);
+
+                AnimalCareEntities.SaveChanges();
+
+                this.lblMessage.Text = "Visit updated successfully!";
+                this.lblMessage.ForeColor = System.Drawing.Color.Green;
+            } catch (Exception ex)
+            {
+                this.lblMessage.Text = "Error updating the visit " + ex.Message;
+                this.lblMessage.ForeColor= System.Drawing.Color.Red;
+            }
         }
     }
 }
