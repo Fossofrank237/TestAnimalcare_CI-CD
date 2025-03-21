@@ -50,7 +50,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2" colspan="4">
-                        <h1>MANAGE APPOINTMENTS</h1>
+                        <h1>MANAGE VISITS</h1>
                     </td>
                 </tr>
                 <tr>
@@ -64,9 +64,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="4">
-                        <asp:Button ID="btnNewAppointment" runat="server" Text="New Appointment" style="margin-right: 10px" OnClick="btnNewAppointment_Click"/>
-                        <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Appointment" style="margin-left: 10px;margin-right: 10px"/>
-                        <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Appointment" style="margin-left: 10px;"/>
+                        <asp:Button ID="btnNewAppointment" runat="server" Text="New Visit" style="margin-right: 10px" OnClick="btnNewAppointment_Click"/>
+                        <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Visit" style="margin-left: 10px;margin-right: 10px"/>
+                        <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Visit" style="margin-left: 10px;"/>
                     </td>
                 </tr>
                 <tr>
@@ -74,14 +74,6 @@
                     <td class="auto-style7"></td>
                     <td class="auto-style6"></td>
                     <td class="auto-style6"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style8" colspan="4"><strong>Filter</strong></td>
-                </tr>
-                <tr>
-                    <td class="auto-style9" colspan="4">
-                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" OnClick="btnFilter_Click" />
-                    </td>
                 </tr>
                 </table>
         </div>
@@ -121,6 +113,16 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style2" colspan="5">
+                    <h3>Filter</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style9" colspan="5">
+                        <asp:Button ID="btnFilter" runat="server" Text="Apply Filter" OnClick="btnFilter_Click" />
+                    </td>
+            </tr>
+            <tr>
                 <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
@@ -152,7 +154,7 @@
         <table class="auto-style1">
             <tr>
                 <td>
-                    <h2 class="auto-style2">APPOINTMENTS</h2>
+                    <h2 class="auto-style2">VISITS</h2>
                 </td>
             </tr>
             <tr>

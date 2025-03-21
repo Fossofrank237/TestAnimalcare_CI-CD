@@ -102,7 +102,7 @@ namespace AnimalCare_dbFirst
                 string.IsNullOrWhiteSpace(txtBoxEmployeeLastName.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxDateStart.Text))
             {
-                this.lblMessage.Text = "Error: All fields are required (Owner phone number, Pet name, Employee firts and last name, date for the appointment.";
+                this.lblMessage.Text = "Error: All fields are required (Owner phone number, Pet name, Employee firts and last name, date for the visit.";
                 this.lblMessage.ForeColor = System.Drawing.Color.Red;
                 return;
             }
@@ -136,7 +136,7 @@ namespace AnimalCare_dbFirst
             AnimalCareEntities.Visits.Add(newVisit);
             AnimalCareEntities.SaveChanges();
 
-            this.lblMessage.Text = "Appointment created successcully";
+            this.lblMessage.Text = "Visit created successcully";
             this.lblMessage.ForeColor= System.Drawing.Color.Green;
         }
     }

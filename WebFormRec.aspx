@@ -69,7 +69,7 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14">
-                    <asp:Button ID="btnNewAppointment" runat="server" Text="Manage Appointments" OnClick="btnNewAppointment_Click" />
+                    <asp:Button ID="btnNewAppointment" runat="server" Text="Manage Visits" OnClick="btnNewAppointment_Click" />
                 </td>
                 <td class="auto-style13">
                     <asp:Button ID="btnManageOwners" runat="server" Text="Manage Owners" />
