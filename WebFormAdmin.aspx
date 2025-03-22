@@ -18,12 +18,25 @@
         .filterTxtBoxStyle {
             vertical-align: top;
         }
+        .auto-style4 {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
+                <tr>
+                    <td class="auto-style4" colspan="2">
+                        <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4" colspan="2">
+                        <asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" Text="LogOut" />
+                    </td>
+                </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
                         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Admin Panel"></asp:Label>
@@ -42,7 +55,7 @@
                     <td class="auto-style2" colspan="2">
                         <asp:Button ID="BtnManageEmployee" runat="server" Text="Manage Employees" style="margin-right: 10px"/>
                         <asp:Button ID="BtnDispoVt" runat="server" Text="Consult Veterinarian Schedule" style="margin-left: 10px;margin-right: 10px" OnClick="BtnDispoVt_Click"/>
-                        <asp:Button ID="BtnManageVisits" runat="server" Text="Manage Visits" style="margin-left: 10px;"/>
+                        <asp:Button ID="BtnManageVisits" runat="server" Text="Manage Visits" style="margin-left: 10px;" OnClick="BtnManageVisits_Click"/>
                     </td>
                 </tr>
                 <tr>

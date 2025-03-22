@@ -16,8 +16,16 @@ namespace AnimalCare_dbFirst
         AnimalCareEntities entities = new AnimalCareEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Récupérations des données de session
+            int employeeId = Convert.ToInt32(Session["EmployeeId"]);
+            string employeeRole = Session["EmployeeRole"].ToString();
+            string employeeName = Session["EmployeeName"].ToString();
+
             this.GridViewHistory.DataSource = entities.HistoryVisits.ToList();
             this.GridViewHistory.DataBind();
+
+            this.lblUserName.Text = "Welcome, " + employeeName;
+
         }
 
         protected void TxtBoxFilterPetName_TextChanged(object sender, EventArgs e)
@@ -89,6 +97,21 @@ namespace AnimalCare_dbFirst
         protected void BtnDispoVt_Click(object sender, EventArgs e)
         {
             Response.Redirect("WebFormVetSchedule.aspx");
+        }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            //Effacecr les données de session
+            Session.Clear();
+            Session.Abandon();
+
+            Response.Redirect("WebFormLogin.aspx");
+
+        }
+
+        protected void BtnManageVisits_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormVisits.aspx");
         }
     }
 }

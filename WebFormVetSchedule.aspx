@@ -62,6 +62,15 @@
                         </asp:GridView>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="auto-style3">
+                        <asp:Button ID="BtnReturn" runat="server" OnClick="BtnReturn_Click" Text="Return to Panel" />
+                    </td>
+                </tr>
             </table>
         </div>
     </form>

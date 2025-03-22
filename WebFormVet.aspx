@@ -47,6 +47,13 @@
             text-overflow: ellipsis;
             max-width: 150px;
         }
+        .auto-style17 {
+            width: 335px;
+        }
+        .auto-style18 {
+            height: 23px;
+            width: 335px;
+        }
     </style>
 </head>
 <body>
@@ -57,8 +64,19 @@
                     <td class="auto-style15">&nbsp;</td>
                     <td class="auto-style9">&nbsp;</td>
                     <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style15">&nbsp;</td>
+                    <td class="auto-style9">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
+                    <td>
+                        <asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" Text="Log Out" />
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="5">
@@ -74,7 +92,7 @@
                     <td class="auto-style15">&nbsp;</td>
                     <td class="auto-style9">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -95,35 +113,35 @@
                         </asp:GridView>
                     </td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style15">&nbsp;</td>
                     <td class="auto-style9">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style16"></td>
                     <td class="auto-style10"></td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4"></td>
+                    <td class="auto-style18"></td>
                     <td class="auto-style4"></td>
                 </tr>
                 <tr>
                     <td class="auto-style15">&nbsp;</td>
                     <td class="auto-style9">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style17">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style16">&nbsp;</td>
                     <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4"></td>
+                    <td class="auto-style18"></td>
                     <td class="auto-style4"></td>
                 </tr>
             </table>
@@ -137,7 +155,7 @@
                     <asp:Button ID="btnPetFile" runat="server" Text="Pet's File" />
                 </td>
                 <td class="auto-style13">
-                    <asp:Button ID="Button2" runat="server" Text="Full Schedule" />
+                    <asp:Button ID="Button2" runat="server" Text="Full Schedule" OnClick="Button2_Click" />
                 </td>
             </tr>
         </table>

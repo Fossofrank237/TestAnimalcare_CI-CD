@@ -11,7 +11,7 @@ namespace AnimalCare_dbFirst
 {
 
 
-    public partial class WebFormAdmin
+    public partial class WebFormVisits
     {
 
         /// <summary>
@@ -24,22 +24,31 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblUserName control.
+        /// btnNewAppointment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName;
+        protected global::System.Web.UI.WebControls.Button btnNewAppointment;
 
         /// <summary>
-        /// btnLogOut control.
+        /// btnModifyAppointment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogOut;
+        protected global::System.Web.UI.WebControls.Button btnModifyAppointment;
+
+        /// <summary>
+        /// btnDeleteAppointment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteAppointment;
 
         /// <summary>
         /// Label1 control.
@@ -51,42 +60,6 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-
-        /// <summary>
-        /// BtnManageEmployee control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnManageEmployee;
-
-        /// <summary>
-        /// BtnDispoVt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDispoVt;
-
-        /// <summary>
-        /// BtnManageVisits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnManageVisits;
-
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -96,102 +69,147 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Label4 control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// BtnApplyFilter control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnApplyFilter;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// CalendarFilterDate control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalendarFilterDate;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// BtnRemoveDateFilter control.
+        /// txtBoxOwnerPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRemoveDateFilter;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxOwnerPhone;
 
         /// <summary>
-        /// TxtBoxFilterPetName control.
+        /// txtBoxPetName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterPetName;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxPetName;
 
         /// <summary>
-        /// TxtBoxFilterOwnerFN control.
+        /// txtBoxEmployeeFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterOwnerFN;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxEmployeeFirstName;
 
         /// <summary>
-        /// TxtBoxFilterOwnerLN control.
+        /// txtBoxEmployeeLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterOwnerLN;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxEmployeeLastName;
 
         /// <summary>
-        /// TxtBoxFilterOwnerPN control.
+        /// txtBoxDateStart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterOwnerPN;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxDateStart;
 
         /// <summary>
-        /// TxtBoxFilterEmployeeFN control.
+        /// PanelCalendar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterEmployeeFN;
+        protected global::System.Web.UI.WebControls.Panel PanelCalendar;
 
         /// <summary>
-        /// TxtBoxFilterEmployeeLN control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBoxFilterEmployeeLN;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
 
         /// <summary>
-        /// GridViewHistory control.
+        /// btnFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewHistory;
+        protected global::System.Web.UI.WebControls.Button btnFilter;
+
+        /// <summary>
+        /// btnResetFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnResetFilter;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
+        /// GridViewAppointments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewAppointments;
+
+        /// <summary>
+        /// GridViewAvailability control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewAvailability;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

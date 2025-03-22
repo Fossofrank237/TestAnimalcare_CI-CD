@@ -15,7 +15,6 @@ namespace AnimalCare_dbFirst
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // WTF IS THIS ? WHAT DOES IT DO ? 
             this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
@@ -30,6 +29,11 @@ namespace AnimalCare_dbFirst
             if (employee != null)
             {
                 e.Authenticated = true;
+
+                //Sauvgarder les données pour la session
+                Session["EmployeeId"] = employee.EmployeeId;
+                Session["EmployeeRole"] = employee.Role;
+                Session["EmployeeName"] = employee.FirstName + " " + employee.LastName;
 
                 if (employee.Role.Equals("VT"))
                 {

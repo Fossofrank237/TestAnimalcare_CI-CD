@@ -14,12 +14,25 @@
         .auto-style14 { height: 67px; width: 453px; }
         .auto-style15 { width: 198px; }
         .myGrid td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px; }
+        .auto-style16 {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
+                <tr>
+                    <td colspan="5" class="auto-style16">
+                        <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="auto-style16">
+                        <asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" Text="LogOut" />
+                    </td>
+                </tr>
                 <tr>
                     <td colspan="5">
                         <h1 class="auto-style2">ANIMAL CARE VETERINARY</h1>
@@ -56,7 +69,7 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style14">
-                    <asp:Button ID="btnNewAppointment" runat="server" Text="New Appointment" />
+                    <asp:Button ID="btnNewAppointment" runat="server" Text="Manage Visits" OnClick="btnNewAppointment_Click" />
                 </td>
                 <td class="auto-style13">
                     <asp:Button ID="btnManageOwners" runat="server" Text="Manage Owners" />

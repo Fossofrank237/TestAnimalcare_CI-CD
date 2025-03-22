@@ -11,12 +11,33 @@ namespace AnimalCare_dbFirst
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Récupérations des données de session
+            int employeeId = Convert.ToInt32(Session["EmployeeId"]);
+            string employeeRole = Session["EmployeeRole"].ToString();
+            string employeeName = Session["EmployeeName"].ToString();
+
+            this.lblUserName.Text = "Welcome, " + employeeName;
 
         }
 
         protected void btnManagePets_Click(object sender, EventArgs e)
         {
             Response.Redirect("WebFormRecPet.aspx");
+        }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            //Effacecr les données de session
+            Session.Clear();
+            Session.Abandon();
+
+            Response.Redirect("WebFormLogin.aspx");
+
+        }
+
+        protected void btnNewAppointment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormVisits.aspx");
         }
     }
 }
