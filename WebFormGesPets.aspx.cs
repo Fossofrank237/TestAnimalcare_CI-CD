@@ -14,7 +14,7 @@ namespace AnimalCare_dbFirst
             if (!IsPostBack)
             {
                 LoadOwnersDropdown();
-                LoadTotalPets(); // On charge tout par défaut
+                LoadTotalPets(); 
             }
         }
 
@@ -158,24 +158,27 @@ namespace AnimalCare_dbFirst
             }
         }
 
-        protected void btnViewTodayVisits_Click(object sender, EventArgs e)
+        protected void btnTodayVisits_Click(object sender, EventArgs e)
         {
+            
+            GridView1.Visible = false;
+            GridViewTodayVisits.Visible = true;
+
             var todayVisits = entities.vw_VisitsForToday
                 .AsEnumerable()
                 .Select(v => new
                 {
                     v.VisitId,
-                    VisitStart = v.DateStart.ToString("yyyy-MM-dd HH:mm"),
-                    VisitEnd = v.DateEnd.ToString("yyyy-MM-dd HH:mm"),
                     v.PetName,
+                    DateStart = v.DateStart.ToString("yyyy-MM-dd HH:mm"),
+                    DateEnd = v.DateEnd.ToString("yyyy-MM-dd HH:mm"),
                     Veterinary = v.EmployeeFirstName + " " + v.EmployeeLastName
-                })
-                .ToList();
+                }).ToList();
 
-            GridView1.DataSource = todayVisits;
-            GridView1.DataBind();
-            GridView1.Visible = true;
+            GridViewTodayVisits.DataSource = todayVisits;
+            GridViewTodayVisits.DataBind();
         }
+
 
     }
 }

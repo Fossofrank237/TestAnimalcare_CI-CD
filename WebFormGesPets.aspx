@@ -30,7 +30,8 @@
 
             <tr>
                 <td class="auto-style3" colspan="2">
-                    <asp:Button ID="btnViewTodayVisits" runat="server" Text="Today's Visits" OnClick="btnViewTodayVisits_Click" />
+                    <asp:Button ID="btnTodayVisits" runat="server" Text="Today Visits"
+      CssClass="btn" OnClick="btnTodayVisits_Click" />
                     &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnViewActivePets" runat="server" Text="Active Pets" OnClick="btnViewActivePets_Click" />
                     &nbsp;&nbsp;&nbsp;
@@ -85,6 +86,30 @@
                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
+                    <!-- GridView pour les visites d’aujourd’hui -->
+<asp:GridView ID="GridViewTodayVisits" runat="server" AutoGenerateColumns="False"
+    CellPadding="4" ForeColor="#333333" GridLines="None" Visible="False"
+    CssClass="grid-view">
+    <AlternatingRowStyle BackColor="White" />
+    <Columns>
+        <asp:BoundField DataField="VisitId" HeaderText="Visit ID" ReadOnly="true" />
+        <asp:BoundField DataField="PetName" HeaderText="Pet" />
+        <asp:BoundField DataField="DateStart" HeaderText="Start Time" />
+        <asp:BoundField DataField="DateEnd" HeaderText="End Time" />
+        <asp:BoundField DataField="Veterinary" HeaderText="Veterinary" />
+    </Columns>
+    <EditRowStyle BackColor="#2461BF" />
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+    <RowStyle BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+</asp:GridView>
+
                 </td>
             </tr>
         </table>
