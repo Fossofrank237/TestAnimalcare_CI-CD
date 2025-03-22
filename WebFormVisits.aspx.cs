@@ -31,7 +31,20 @@ namespace AnimalCare_dbFirst
 
         protected void txtBoxDateStart_TextChanged1(object sender, EventArgs e)
         {
-            this.PanelCalendar.Visible = true;
+
+            if (ViewState["DateStartChanged"] == null)
+            {
+
+                this.PanelCalendar.Visible = true;
+
+
+                ViewState["DateStartChanged"] = true;
+            }
+            else
+            {
+                this.PanelCalendar.Visible = false;
+            }
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -92,6 +105,8 @@ namespace AnimalCare_dbFirst
             this.txtBoxEmployeeFirstName.Text = "";
             this.txtBoxEmployeeLastName.Text = "";
             this.txtBoxDateStart.Text = "";
+            this.lblMessage.Text = "";
+            ViewState["DateStartChanged"] = null;
         }
 
         protected void btnNewAppointment_Click(object sender, EventArgs e)
@@ -131,13 +146,41 @@ namespace AnimalCare_dbFirst
                 PetId = petId,
             };
 
-            //Assignation de la visit dans la propiéte de navigation de la visit
-            newVisit.Employees.Add(selectedEmployee);
-            AnimalCareEntities.Visits.Add(newVisit);
-            AnimalCareEntities.SaveChanges();
+            try
+            {
+                //Assignation de la visit dans la propiéte de navigation de la visit
+                newVisit.Employees.Add(selectedEmployee);
+                AnimalCareEntities.Visits.Add(newVisit);
+                AnimalCareEntities.SaveChanges();
 
-            this.lblMessage.Text = "Visit created successcully";
-            this.lblMessage.ForeColor= System.Drawing.Color.Green;
+                this.lblMessage.Text = "Visit created successcully";
+                this.lblMessage.ForeColor = System.Drawing.Color.Green;
+            } catch (Exception ex)
+            {
+                string errorMessage;
+
+                if (ex.InnerException?.InnerException != null)
+                {
+                    errorMessage = ex.InnerException.InnerException.Message;
+                }
+                else if (ex.InnerException != null)
+                {
+                    errorMessage = ex.InnerException.Message;
+                }
+                else
+                {
+                    errorMessage = ex.Message;
+                }
+
+                this.lblMessage.Text = "Error: " + errorMessage;
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+
+
+            //GridView pour les rendez-vous
+            var visits = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
+            GridViewAppointments.DataSource = visits;
+            GridViewAppointments.DataBind();
         }
 
         protected void btnModifyAppointment_Click(object sender, EventArgs e)
@@ -168,7 +211,7 @@ namespace AnimalCare_dbFirst
                 Where(v => v.PetId == petId).
                 FirstOrDefault();
 
-            if(visitSelected != null)
+            if(visitSelected == null)
             {
                 this.lblMessage.Text = "Visit not found";
                 this.lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -192,10 +235,20 @@ namespace AnimalCare_dbFirst
                 visitSelected.Active = true;
                 visitSelected.PetId = petId;
 
-                visitSelected.Employees.Clear();
-                visitSelected.Employees.Add(selectedEmployee);
+                //Vérification si la visit est avec le meme vet ou autre.
+                if(selectedEmployee != null)
+                {
+                    visitSelected.Employees.Clear();
+                    visitSelected.Employees.Add(selectedEmployee);
+                }
+                
 
                 AnimalCareEntities.SaveChanges();
+
+                //GridView pour les rendez-vous
+                var visits = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
+                GridViewAppointments.DataSource = visits;
+                GridViewAppointments.DataBind();
 
                 this.lblMessage.Text = "Visit updated successfully!";
                 this.lblMessage.ForeColor = System.Drawing.Color.Green;
@@ -204,6 +257,54 @@ namespace AnimalCare_dbFirst
                 this.lblMessage.Text = "Error updating the visit " + ex.Message;
                 this.lblMessage.ForeColor= System.Drawing.Color.Red;
             }
+        }
+
+        protected void btnDeleteAppointment_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBoxOwnerPhone.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPetName.Text))
+            {
+                this.lblMessage.Text = "Error: Owner phone number and Pet name are required.";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            //Récupération des petId et Visit à modifier
+
+            int petId = AnimalCareEntities.Pets.
+                Where(p => p.Name == this.txtBoxPetName.Text).
+                Select(p => p.PetId)
+                .FirstOrDefault();
+
+            if (petId == 0)
+            {
+                this.lblMessage.Text = "Pet not found";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            Visit visitSelected = AnimalCareEntities.Visits.
+                Where(v => v.PetId == petId).
+                FirstOrDefault();
+
+            if (visitSelected == null)
+            {
+                this.lblMessage.Text = "Visit not found";
+                this.lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            visitSelected.Employees.Clear();
+            AnimalCareEntities.Visits.Remove(visitSelected);
+            AnimalCareEntities.SaveChanges();
+
+            //GridView pour les rendez-vous
+            var visits = AnimalCareEntities.vw_ActiveVisitsForPets.ToList();
+            GridViewAppointments.DataSource = visits;
+            GridViewAppointments.DataBind();
+
+            this.lblMessage.Text = "Visit deleted successfully!";
+            this.lblMessage.ForeColor = System.Drawing.Color.Green;
         }
     }
 }

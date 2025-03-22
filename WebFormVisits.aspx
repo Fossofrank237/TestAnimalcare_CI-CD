@@ -66,7 +66,7 @@
                     <td class="auto-style2" colspan="4">
                         <asp:Button ID="btnNewAppointment" runat="server" Text="New Visit" style="margin-right: 10px" OnClick="btnNewAppointment_Click"/>
                         <asp:Button ID="btnModifyAppointment" runat="server" Text="Modify Visit" style="margin-left: 10px;margin-right: 10px" OnClick="btnModifyAppointment_Click"/>
-                        <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Visit" style="margin-left: 10px;"/>
+                        <asp:Button ID="btnDeleteAppointment" runat="server" Text="Delete Visit" style="margin-left: 10px;" OnClick="btnDeleteAppointment_Click"/>
                     </td>
                 </tr>
                 <tr>
