@@ -141,15 +141,6 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.WebControls.TextBox txtBoxDateStart;
 
         /// <summary>
-        /// btnFilter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFilter;
-
-        /// <summary>
         /// PanelCalendar control.
         /// </summary>
         /// <remarks>
@@ -168,13 +159,13 @@ namespace AnimalCare_dbFirst
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
 
         /// <summary>
-        /// lblMessage control.
+        /// btnFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Button btnFilter;
 
         /// <summary>
         /// btnResetFilter control.
@@ -184,6 +175,15 @@ namespace AnimalCare_dbFirst
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnResetFilter;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
         /// GridViewAppointments control.
