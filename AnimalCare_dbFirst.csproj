@@ -85,7 +85,6 @@
     </Content>
     <Content Include="Web.config" />
     <Content Include="WebFormAdmin.aspx" />
-    <Content Include="WebFormOwners.aspx" />
     <Content Include="WebFormGesPets.aspx" />
     <Content Include="WebFormLogin.aspx" />
     <Content Include="WebFormRec.aspx" />
@@ -222,10 +221,12 @@
     </Compile>
     <Compile Include="WebFormGesPets.aspx.cs">
       <DependentUpon>WebFormGesPets.aspx</DependentUpon>
+    <Compile Include="WebFormEmployee.aspx.cs">
+      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormGesPets.aspx.designer.cs">
-      <DependentUpon>WebFormGesPets.aspx</DependentUpon>
+    <Compile Include="WebFormEmployee.aspx.designer.cs">
+      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormLogin.aspx.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>
