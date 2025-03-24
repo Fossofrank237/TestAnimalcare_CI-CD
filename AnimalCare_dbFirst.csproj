@@ -221,6 +221,8 @@
     </Compile>
     <Compile Include="WebFormGesPets.aspx.cs">
       <DependentUpon>WebFormGesPets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="WebFormEmployee.aspx.cs">
       <DependentUpon>WebFormEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
