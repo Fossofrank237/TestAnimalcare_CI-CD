@@ -225,7 +225,7 @@
       <DependentUpon>WebFormEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormEmployee.aspx.designer.cs">
+    <Compile Include="WebFormEmployee.aspx.cs">
       <DependentUpon>WebFormEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormLogin.aspx.cs">
