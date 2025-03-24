@@ -39,5 +39,10 @@ namespace AnimalCare_dbFirst
         {
             Response.Redirect("WebFormVisits.aspx");
         }
+
+        protected void btnManageOwners_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebFormOwners.aspx");
+        }
     }
 }
