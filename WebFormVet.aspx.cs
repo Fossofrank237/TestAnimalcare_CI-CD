@@ -166,5 +166,10 @@ namespace AnimalCare_dbFirst
             this.PanelCalendar.Visible = false;
 
         }
+
+        protected void btnPetFile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AnimalRecords.aspx");
+        }
     }
 }
