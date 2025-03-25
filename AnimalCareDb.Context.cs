@@ -18,7 +18,7 @@ namespace AnimalCare_dbFirst
     public partial class AnimalCareEntities : DbContext
     {
         public AnimalCareEntities()
-            : base("AnimalCare")
+            : base("AnimalCareEntities")
         {
         }
     

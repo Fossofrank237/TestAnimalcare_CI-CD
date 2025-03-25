@@ -116,7 +116,7 @@ namespace AnimalCare_dbFirst
 
         protected void BtnManageEmployee_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebFormEmployeeV2.aspx");
+            Response.Redirect("WebFormEmployee.aspx");
         }
     }
 }

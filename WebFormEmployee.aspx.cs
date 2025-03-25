@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace AnimalCare_dbFirst
 {
-    public partial class WebFormEmployeeV2 : System.Web.UI.Page
+    public partial class WebFormEmployee : System.Web.UI.Page
     {
         AnimalCareEntities entities = new AnimalCareEntities();
         protected void Page_Load(object sender, EventArgs e)
