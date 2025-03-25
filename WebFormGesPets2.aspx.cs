@@ -179,6 +179,19 @@ namespace AnimalCare_dbFirst
             GridViewTodayVisits.DataBind();
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["EmployeeRole"].ToString().Equals("AD"))
+            {
+                Response.Redirect("WebFormAdmin.aspx");
+            }
+            else if (Session["EmployeeRole"].ToString().Equals("RE"))
+            {
+                Response.Redirect("WebFormRec.aspx");
+            }
+
+        }
+
 
     }
 }

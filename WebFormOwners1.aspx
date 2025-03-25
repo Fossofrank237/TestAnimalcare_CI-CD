@@ -67,6 +67,9 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
         </div>
+        <p class="center">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Return to Panel" />
+                </p>
     </form>
 </body>
 </html>
