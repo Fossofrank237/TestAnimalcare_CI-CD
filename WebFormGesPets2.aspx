@@ -30,7 +30,7 @@
 
             <tr>
                 <td class="auto-style3" colspan="2">
-                    <asp:Button ID="btnTodayVisits" runat="server" Text="Today Visits"
+                    <asp:Button ID="btnTodayVisits" runat="server" Text="Today Visitss"
       CssClass="btn" OnClick="btnTodayVisits_Click" />
                     &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnViewActivePets" runat="server" Text="Active Pets" OnClick="btnViewActivePets_Click" />
