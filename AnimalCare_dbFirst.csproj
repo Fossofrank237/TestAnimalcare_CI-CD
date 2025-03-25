@@ -85,6 +85,7 @@
     <Content Include="AnimalReports.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebFormAdmin.aspx" />
+    <Content Include="WebFormEmployee.aspx" />
     <Content Include="WebFormGesPets1.aspx" />
     <Content Include="WebFormGesPets2.aspx" />
     <Content Include="WebFormLogin.aspx" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="WebFormAdmin.aspx.designer.cs">
       <DependentUpon>WebFormAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormEmployee.aspx.cs">
+      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormEmployee.aspx.designer.cs">
+      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormGesPets2.aspx.cs">
       <DependentUpon>WebFormGesPets2.aspx</DependentUpon>
