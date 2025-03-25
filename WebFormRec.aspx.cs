@@ -22,7 +22,7 @@ namespace AnimalCare_dbFirst
 
         protected void btnManagePets_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebFormGesPets1.aspx");
+            Response.Redirect("WebFormGesPets.aspx");
         }
 
         protected void btnLogOut_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace AnimalCare_dbFirst
 
         protected void btnManageOwners_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebFormOwners1.aspx");
+            Response.Redirect("WebFormOwners.aspx");
         }
     }
 }

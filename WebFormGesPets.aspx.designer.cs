@@ -11,7 +11,7 @@ namespace AnimalCare_dbFirst
 {
 
 
-    public partial class WebFormGesPets1
+    public partial class WebFormGesPets
     {
 
         /// <summary>

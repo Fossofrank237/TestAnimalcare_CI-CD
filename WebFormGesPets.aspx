@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormGesPets2.aspx.cs" Inherits="AnimalCare_dbFirst.WebFormGesPets2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormGesPets.aspx.cs" Inherits="AnimalCare_dbFirst.WebFormGesPets" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +30,7 @@
 
             <tr>
                 <td class="auto-style3" colspan="2">
-                    <asp:Button ID="btnTodayVisits" runat="server" Text="Today Visitss"
+                    <asp:Button ID="btnTodayVisits" runat="server" Text="Today Visits"
       CssClass="btn" OnClick="btnTodayVisits_Click" />
                     &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnViewActivePets" runat="server" Text="Active Pets" OnClick="btnViewActivePets_Click" />
