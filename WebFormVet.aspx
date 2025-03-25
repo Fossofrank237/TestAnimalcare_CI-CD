@@ -172,7 +172,7 @@
                     <asp:Button ID="btnAvailability" runat="server" Text="Availability" OnClick="btnAvailability_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:Button ID="btnPetFile" runat="server" Text="Pet's File" />
+                    <asp:Button ID="btnPetFile" runat="server" Text="Pet's File" OnClick="btnPetFile_Click" />
                 </td>
                 <td class="auto-style13">
                     <asp:Button ID="Button2" runat="server" Text="Full Schedule" OnClick="Button2_Click" />

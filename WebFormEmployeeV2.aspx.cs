@@ -8,21 +8,21 @@ using System.Web.UI.WebControls;
 
 namespace AnimalCare_dbFirst
 {
-	public partial class WebFormEmployee : System.Web.UI.Page
-	{
-		AnimalCareEntities entities = new AnimalCareEntities();
-
-		protected void Page_Load(object sender, EventArgs e)
-		{
-			// Loader le gridView avec la vue EmployeeContacts
-			this.GridViewEmployee.DataSource = entities.vw_EmployeeContacts.ToList();
-			this.GridViewEmployee.DataBind();
-		}
+    public partial class WebFormEmployeeV2 : System.Web.UI.Page
+    {
+        AnimalCareEntities entities = new AnimalCareEntities();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Loader le gridView avec la vue EmployeeContacts
+            this.GridViewEmployee.DataSource = entities.vw_EmployeeContacts.ToList();
+            this.GridViewEmployee.DataBind();
+        }
 
         /// <summary>
         /// Reset all the possible input to default value. 
         /// </summary>
-        private void ResetAllInput() {
+        private void ResetAllInput()
+        {
             TxtBoxId.Text = string.Empty;
             TxtBoxFn.Text = string.Empty;
             TxtBoxLn.Text = string.Empty;
@@ -36,7 +36,8 @@ namespace AnimalCare_dbFirst
         /// <summary>
         /// Disable all the possible input
         /// </summary>
-        private void DisableAllInput() { 
+        private void DisableAllInput()
+        {
             TxtBoxId.Enabled = false;
             TxtBoxFn.Enabled = false;
             TxtBoxLn.Enabled = false;
@@ -56,7 +57,8 @@ namespace AnimalCare_dbFirst
         /// true for only the id and false for all but id.
         /// </param>
         /// <returns></returns>
-        private bool CheckAllInputSelected(bool withId) {
+        private bool CheckAllInputSelected(bool withId)
+        {
             if (withId)
             {
                 return !string.IsNullOrEmpty(TxtBoxId.Text);
@@ -74,7 +76,8 @@ namespace AnimalCare_dbFirst
                 {
                     return true;
                 }
-                else {
+                else
+                {
                     return false;
                 }
             }
@@ -85,8 +88,10 @@ namespace AnimalCare_dbFirst
         /// </summary>
         /// <param name="error">Is an error</param>
         /// <param name="msg">the text to print</param>
-        private void AddMessage(bool error, string msg) {
-            if (error) { 
+        private void AddMessage(bool error, string msg)
+        {
+            if (error)
+            {
                 LabelMsg.ForeColor = Color.Red;
             }
             else
@@ -94,13 +99,13 @@ namespace AnimalCare_dbFirst
                 LabelMsg.ForeColor = Color.Green;
             }
             LabelMsg.Text = msg;
-        } 
+        }
 
-		/// <summary>
-		/// Selecting add as the action on the page  
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+        /// <summary>
+        /// Selecting add as the action on the page  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void BtnAdd_Click(object sender, EventArgs e)
         {
             HiddenFieldOption.Value = "add";
@@ -215,9 +220,10 @@ namespace AnimalCare_dbFirst
                             // Reseting the view
                             DisableAllInput();
                             ResetAllInput();
-                            
+
                         }
-                        else {
+                        else
+                        {
                             // Error message.
                             AddMessage(true, "Please fill all the required input!");
                         }
@@ -229,7 +235,8 @@ namespace AnimalCare_dbFirst
                             Employee emp = entities.Employees.Find(Convert.ToInt32(TxtBoxId.Text));
 
                             // Check if employee doesnt exist 
-                            if (emp == null) {
+                            if (emp == null)
+                            {
                                 AddMessage(true, "Employee with this ID doesn't exist!");
                                 ResetAllInput();
                                 return;
@@ -332,7 +339,9 @@ namespace AnimalCare_dbFirst
                         }
                         return;
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 string errorMessage;
 
                 if (ex.InnerException?.InnerException != null)

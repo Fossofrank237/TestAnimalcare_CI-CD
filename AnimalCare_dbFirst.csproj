@@ -80,6 +80,9 @@
       <DependentUpon>AnimalCareDb.edmx</DependentUpon>
       <LastGenOutput>AnimalCareDb.cs</LastGenOutput>
     </Content>
+    <Content Include="AnimalDetails.aspx" />
+    <Content Include="AnimalsRecords.aspx" />
+    <Content Include="AnimalReports.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebFormAdmin.aspx" />
     <Content Include="WebFormGesPets1.aspx" />
@@ -105,6 +108,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AnimalCareDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AnimalDetails.aspx.cs">
+      <DependentUpon>AnimalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnimalDetails.aspx.designer.cs">
+      <DependentUpon>AnimalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnimalsRecords.aspx.cs">
+      <DependentUpon>AnimalsRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnimalsRecords.aspx.designer.cs">
+      <DependentUpon>AnimalsRecords.aspx</DependentUpon>
     </Compile>
     <Compile Include="Availability.cs">
       <DependentUpon>AnimalCareDb.tt</DependentUpon>
@@ -154,6 +171,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecentPetTreatment.cs">
       <DependentUpon>AnimalCareDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AnimalReports.aspx.cs">
+      <DependentUpon>AnimalReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnimalReports.aspx.designer.cs">
+      <DependentUpon>AnimalReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="sp_GetOwnersWithMultiplePets_Result.cs">
       <DependentUpon>AnimalCareDb.tt</DependentUpon>
@@ -210,19 +234,23 @@
     <Compile Include="WebFormAdmin.aspx.designer.cs">
       <DependentUpon>WebFormAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebFormOwners.aspx.cs">
+      <DependentUpon>WebFormOwners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormOwners.aspx.designer.cs">
+      <DependentUpon>WebFormOwners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormGesPets.aspx.cs">
+      <DependentUpon>WebFormGesPets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="WebFormEmployee.aspx.cs">
       <DependentUpon>WebFormEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebFormEmployee.aspx.cs">
       <DependentUpon>WebFormEmployee.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebFormGesPets1.aspx.cs">
-      <DependentUpon>WebFormGesPets1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebFormGesPets1.aspx.designer.cs">
-      <DependentUpon>WebFormGesPets1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormLogin.aspx.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>
