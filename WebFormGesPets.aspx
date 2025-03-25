@@ -113,6 +113,9 @@
                 </td>
             </tr>
         </table>
+        <p class="auto-style3">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Return to Panel" />
+                </p>
     </form>
 </body>
 </html>

@@ -75,5 +75,18 @@ namespace AnimalCare_dbFirst
             db.SaveChanges();
             LoadOwners();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["EmployeeRole"].ToString().Equals("AD"))
+            {
+                Response.Redirect("WebFormAdmin.aspx");
+            }
+            else if (Session["EmployeeRole"].ToString().Equals("RE"))
+            {
+                Response.Redirect("WebFormRec.aspx");
+            }
+
+        }
     }
 }
