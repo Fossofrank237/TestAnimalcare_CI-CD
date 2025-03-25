@@ -19,5 +19,6 @@ namespace AnimalCare_dbFirst
         public string Description { get; set; }
         public string Medicine { get; set; }
         public Nullable<int> Dose { get; set; }
+        public object Treatment { get; internal set; }
     }
 }

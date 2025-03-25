@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.Entity;
 
 namespace AnimalCare_dbFirst
 {
@@ -17,20 +21,12 @@ namespace AnimalCare_dbFirst
                 LoadAnimalRecords();
             }
         }
-        protected void LoadAnimalRecords()
-        {
-            var animalData = entities.Pets
-                .Select(p => new
-                {
-                    p.PetId,
-                    p.Name,
-                    p.Species,
-                    OwnerName = p.Owner.FirstName + " " + p.Owner.LastName,
-                    OwnerPhone = p.Owner.PhoneNumber
-                }).ToList();
 
-            gvAnimals.DataSource = animalData;
-            gvAnimals.DataBind();
-        }
+        protected void LoadAnimalRecords()
+            {
+            var records = this.entities.Pets.Include(p => p.Owner).ToList();
+                gvAnimalRecords.DataSource = records;
+                gvAnimalRecords.DataBind();
+            }
     }
 }

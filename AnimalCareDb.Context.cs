@@ -14,7 +14,8 @@ namespace AnimalCare_dbFirst
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    
+    using System.Collections.Generic;
+
     public partial class AnimalCareEntities : DbContext
     {
         public AnimalCareEntities()
@@ -34,6 +35,7 @@ namespace AnimalCare_dbFirst
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Treatment> Treatments { get; set; }
         public virtual DbSet<Visit> Visits { get; set; }
+        public virtual DbSet<Report> Report { get; set; }
         public virtual DbSet<HistoryVisit> HistoryVisits { get; set; }
         public virtual DbSet<OngoingVisit> OngoingVisits { get; set; }
         public virtual DbSet<OwnerWithPetCount> OwnerWithPetCounts { get; set; }
@@ -46,7 +48,9 @@ namespace AnimalCare_dbFirst
         public virtual DbSet<vw_TreatmentsWithoutMedicine> vw_TreatmentsWithoutMedicine { get; set; }
         public virtual DbSet<vw_VeterinaryAvailabilityForWeek> vw_VeterinaryAvailabilityForWeek { get; set; }
         public virtual DbSet<vw_VisitsForToday> vw_VisitsForToday { get; set; }
-    
+       
+     
+
         public virtual int CloseVisit(Nullable<int> visitId)
         {
             var visitIdParameter = visitId.HasValue ?

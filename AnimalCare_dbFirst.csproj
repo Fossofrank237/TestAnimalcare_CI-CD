@@ -83,7 +83,7 @@
       <DependentUpon>AnimalCareDb.edmx</DependentUpon>
       <LastGenOutput>AnimalCareDb.cs</LastGenOutput>
     </Content>
-    <Content Include="AnimalDetails.aspx" />
+    <Content Include="AnimalActiveTreatment.aspx" />
     <Content Include="AnimalsRecords.aspx" />
     <Content Include="AnimalReports.aspx" />
     <Content Include="Web.config" />
@@ -111,12 +111,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AnimalCareDb.edmx</DependentUpon>
     </Compile>
-    <Compile Include="AnimalDetails.aspx.cs">
-      <DependentUpon>AnimalDetails.aspx</DependentUpon>
+    <Compile Include="AnimalActiveTreatment.aspx.cs">
+      <DependentUpon>AnimalActiveTreatment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AnimalDetails.aspx.designer.cs">
-      <DependentUpon>AnimalDetails.aspx</DependentUpon>
+    <Compile Include="AnimalActiveTreatment.aspx.designer.cs">
+      <DependentUpon>AnimalActiveTreatment.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnimalsRecords.aspx.cs">
       <DependentUpon>AnimalsRecords.aspx</DependentUpon>
@@ -246,13 +246,6 @@
     <Compile Include="WebFormGesPets.aspx.cs">
       <DependentUpon>WebFormGesPets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebFormEmployee.aspx.cs">
-      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebFormEmployee.aspx.cs">
-      <DependentUpon>WebFormEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormLogin.aspx.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>

@@ -169,7 +169,7 @@ namespace AnimalCare_dbFirst
 
         protected void btnPetFile_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AnimalRecords.aspx");
+            Response.Redirect("AnimalReports.aspx");
         }
     }
 }
