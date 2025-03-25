@@ -5,7 +5,7 @@ using System.Web.UI.WebControls;
 
 namespace AnimalCare_dbFirst
 {
-    public partial class WebFormGesPets : System.Web.UI.Page
+    public partial class WebFormGesPets1 : System.Web.UI.Page
     {
         AnimalCareEntities entities = new AnimalCareEntities();
 
@@ -14,7 +14,7 @@ namespace AnimalCare_dbFirst
             if (!IsPostBack)
             {
                 LoadOwnersDropdown();
-                LoadTotalPets(); 
+                LoadTotalPets();
             }
         }
 
@@ -160,7 +160,7 @@ namespace AnimalCare_dbFirst
 
         protected void btnTodayVisits_Click(object sender, EventArgs e)
         {
-            
+
             GridView1.Visible = false;
             GridViewTodayVisits.Visible = true;
 
